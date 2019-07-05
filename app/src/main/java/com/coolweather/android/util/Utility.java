@@ -72,7 +72,7 @@ public class Utility {
                     city.save();
                 }
 
-                return  true;
+                return true;
             }
             catch (JSONException e)
             {
