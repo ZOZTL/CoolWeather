@@ -9,7 +9,7 @@ import org.litepal.crud.LitePalSupport;
 public class County extends LitePalSupport {
     private int id;
 
-    private String countName;
+    private String countyName;
 
     private int cityId;
 
@@ -27,14 +27,14 @@ public class County extends LitePalSupport {
     }
 
 
-    public String getCountName()
+    public String getCountyName()
     {
-        return countName;
+        return countyName;
     }
 
-    public void setCountName(String countName)
+    public void setCountyName(String countyName)
     {
-        this.countName = countName;
+        this.countyName = countyName;
     }
 
     public int getCityId()

@@ -42,7 +42,7 @@ public class City extends LitePalSupport {
 
     public void setCityCode(int CityCode)
     {
-        this.cityCode = cityCode;
+        this.cityCode = CityCode;
     }
     public int getProvinceId()
     {
