@@ -24,89 +24,89 @@ public class HeWeatherBean {
 
   public class BasicBena {
     @SerializedName("city")
-    String cityName;
+    public String cityName;
     @SerializedName("id")
-    String cityId;
+    public String cityId;
     @SerializedName("update")
-    UpdateBean update;
+    public UpdateBean update;
 
     public class UpdateBean
     {
       @SerializedName("loc")
-      String updataTime;
+      public String updataTime;
     }
 
   }
 
   public class AQIBean {
     @SerializedName("city")
-    CityBean city;
+    public CityBean city;
 
     public class CityBean
     {
-      @SerializedName("api")
-      String api;
+      @SerializedName("aqi")
+      public String api;
 
       @SerializedName("pm25")
-      String pm25;
+      public String pm25;
     }
   }
 
   public class NowBean {
     @SerializedName("tmp")
-    String temperature;
+    public String temperature;
     @SerializedName("cond")
-    CondBean cond;
+    public CondBean cond;
 
     public class CondBean
     {
       @SerializedName("txt")
-      String txt;
+      public String txt;
     }
   }
 
   public class SuggestionBean {
     @SerializedName("comf")
-    COMFBean comfort;
+    public COMFBean comfort;
     @SerializedName("cw")
-    CWBean carWash;
+    public CWBean carWash;
     @SerializedName("sport")
-    SPORTBean sport;
+    public SPORTBean sport;
 
     public class COMFBean{
 
       @SerializedName("txt")
-      String txt;
+      public String txt;
     }
     public class CWBean{
       @SerializedName("txt")
-      String txt;
+      public String txt;
     }
     public class SPORTBean{
       @SerializedName("txt")
-      String txt;
+      public String txt;
     }
   }
 
   public class DaliyforecastBean {
     @SerializedName("date")
-    String date;
+    public String date;
     @SerializedName("cond")
-    CondBean cond;
+    public CondBean cond;
     @SerializedName("tmp")
-    TmpBean temperature;
+    public TmpBean temperature;
 
     public class CondBean
     {
-      @SerializedName("txt")
-      String txt;
+      @SerializedName("txt_d")
+      public String txt;
     }
     public class TmpBean
     {
       @SerializedName("max")
-      String max;
+      public String max;
       @SerializedName("min")
-      String min;
+      public String min;
     }
   }
 }

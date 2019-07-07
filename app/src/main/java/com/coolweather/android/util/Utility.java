@@ -6,6 +6,8 @@ import com.coolweather.android.db.City;
 import com.coolweather.android.db.County;
 import com.coolweather.android.db.Province;
 
+import com.coolweather.android.gson.HeWeatherBean;
+import com.google.gson.Gson;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -115,5 +117,24 @@ public class Utility {
 
         }
         return false;
+    }
+
+    /**
+     * 处理收到的天气json数据
+     * @param response
+     * @return HeWeatherBean
+     */
+    public static HeWeatherBean handleWeatherResponse(String response){
+        try{
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent,HeWeatherBean.class);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }
